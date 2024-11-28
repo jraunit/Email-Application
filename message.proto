@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package messenger;
+
+// Define the gRPC service
+service Messenger {
+  // The function for sending and receiving a message
+  rpc SendMessage(MessageRequest) returns (MessageResponse);
+}
+
+// Define the request message structure
+message MessageRequest {
+  string content = 1;
+}
+
+// Define the response message structure
+message MessageResponse {
+  string content = 1;
+}
+
